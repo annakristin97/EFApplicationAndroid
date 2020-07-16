@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.ItemActivity"
+    android:id="@+id/activity_item_container"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nametext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorPrimaryBlue"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="wrap_content"
+            android:layout_height="280dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            tools:context=".UI.ItemActivity" />
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/size"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Size"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryBlue"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/sizetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="8sp"
+                    android:text="sizetext"
+                    android:textColor="@color/colorPrimaryBlue"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price (ISK)"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryBlue"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/pricetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="pricetext"
+                    android:textColor="@color/colorPrimaryBlue"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Condition"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryBlue"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/conditiontext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="conditiontext"
+                    android:textColor="@color/colorPrimaryBlue"
+                    android:textSize="18sp" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/descriptiontext"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_margin="20dp"
+                android:text="descriptiontext"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buyButton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="20dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/mybutton"
+                android:text="add to cart"
+                android:textColor="@color/colorAccentWhite"
+                android:visibility="visible"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/youHaveToLogIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="You have to log in to buy an item!"
+            android:textColor="@color/colorPrimaryRed"
+            android:textSize="18sp"
+            android:visibility="invisible"
+            tools:visibility="invisible" />
+
+
+    </LinearLayout>
+</RelativeLayout>
